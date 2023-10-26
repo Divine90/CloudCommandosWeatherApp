@@ -5,6 +5,7 @@ import time # Time library for manipulating time data
 
  
 # Function to retrieve weather information
+# Display an error message if an exception occurs during weather retrieval
 def getWeather(canvas):
     try: 
         # Get the city name from the text entry field
@@ -34,7 +35,6 @@ def getWeather(canvas):
         label1.config(text = final_info)
         label2.config(text = final_data)
     
-        # Display an error message if an exception occurs during weather retrieval
     except Exception as e: 
         label2.config(text = "No city found")
 
